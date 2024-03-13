@@ -1,0 +1,125 @@
+html {
+    background-color: rgb(170, 218, 255);
+    color: rgb(0,0,0);
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+table{
+    width:100%;
+}
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(202, 202, 202);
+}
+
+table {
+    background-color: rgb(157, 157, 157);
+}
+
+th {
+    background-color: rgb(157, 157, 157);
+}
+
+input{
+    text-align: center;
+    width: 250px;
+    height: 45px;
+    background-color: rgb(202, 202, 202);
+    font-size: 30px;
+    border-style: none;
+}
+
+.gpa{
+    text-align: right;
+    height:45px;
+    width:200px;
+    font-size: 30px;
+}
+
+#w{
+    background-color: white;
+}
+
+.white{
+    background-color: white;
+}
+
+.anz{
+    width: 200px;
+}
+
+#t2 {
+    background-color: rgb(170, 218, 255);
+    border-style: none;
+}
+
+#t2c1 {
+    width:500px;
+    background-color: white;
+    text-align: left;
+}
+
+#t2c2 {
+    width:200px;
+}
+
+#t2c3 {
+    background-color: rgb(170, 218, 255);
+    width: 850px;
+    border-style: none;
+}
+
+#gppa {
+    text-align: right;
+}
+
+#gppg {
+    text-align: right;
+}
+
+#vk {
+    text-align: right;
+}
+
+#gpv {
+    text-align: right;
+}
+
+.blank {
+    background-color: rgb(170, 218, 255);
+    border-style: none;
+}
+
+button {
+    width: 400px;
+    height: 100px;
+    font-size: 40px ;
+}
+
+#s {
+    color:rgb(163, 23, 23);
+}
+
+#n {
+    background-color: white;
+    text-align: left;
+    width: 700px;
+}
+
+#checkbox {
+    width:30px;
+    height:30px;
+}
+
+footer {
+    font-size: 20px;
+}
