@@ -1,15 +1,24 @@
 function preisBestellblock() {
     //assign
     var anzahlBestellblock = document.getElementById("anzahlBestellblock");
-    var bestellblockGesamtPreis = document.getElementById("BestellblockGesamtPreis");
+    var bestellblockGesamtPreis = document.getElementById("bestellblockGesamtPreis");
 
     //result
     var resultBestellblock = Number(anzahlBestellblock.value) * 650 / 100;
 
     bestellblockGesamtPreis.value = resultBestellblock;
-    gesamtp();
-    weight();
 }
+
+function preisNotizblock() {
+    //assign
+    var anzahlNotizblock = document.getElementById("anzahlNotizblock");
+    var notizblockGesamtPreis = document.getElementById("notizblockGesamtPreis");
+
+    //result
+    var resultNotizblock = Number(anzahlNotizblock.value) * 200 / 100;
+
+    notizblockGesamtPreis.value = resultNotizblock;
+} 
 
 function pö() {
     //assign
