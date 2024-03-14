@@ -75,6 +75,16 @@ function preisHautpflegeplan() {
     hautpflegeplanGesamtPreis.value = resultHautpflegeplan;
 }
 
+function preisDankeschönkarten() {
+    //assign
+    var anzahlDankeschönkarten = document.getElementById("anzahlDankeschönkarten");
+    var dankeschönkarteGesamtPreis = document.getElementById("dankeschönkarteGesamtPreis");
+
+    //result
+    var resultDankeschönkarte = Number(anzahlDankeschönkarten.value) * 10 / 100;
+
+    dankeschönkarteGesamtPreis.value = resultDankeschönkarte;
+}
 
 
 
