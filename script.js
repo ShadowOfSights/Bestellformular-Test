@@ -108,6 +108,17 @@ function preisReaumduftflyer() {
     raumduftflyerGesamtPreis.value = resultRaumduftFlyer;
 }
 
+function preisA7() {
+    //assign
+    var anzahlA7 = document.getElementById("anzahlA7");
+    var a7GesamtPreis = document.getElementById("a7GesamtPreis");
+
+    //result
+    var resultA7 = Number(anzahlA7.value) * 15 / 100;
+
+    a7GesamtPreis.value = resultA7;
+}
+
 
 
 
