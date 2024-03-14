@@ -20,6 +20,17 @@ function preisNotizblock() {
     notizblockGesamtPreis.value = resultNotizblock;
 } 
 
+function preisPutzmittelkatalog() {
+    //assign
+    var anzahlPutzmittelkatalog = document.getElementById("anzahlPutzmittelkatalog");
+    var putzmittelkatalogGesamtPreis = document.getElementById("putzmittelkatalogGesamtPreis");
+
+    //reesult
+    var resultPutzmittelkatalog = Number(anzahlPutzmittelkatalog.value) * 100 / 100;
+
+    putzmittelkatalogGesamtPreis.value = resultPutzmittelkatalog;
+}
+
 function pö() {
     //assign
     var aö = document.getElementById("aö");
@@ -100,18 +111,6 @@ function pk() {
     var resk = Number(ak.value) * 3900 / 100;
 
     kgp.value = resk;
-    gesamtp();
-    weight();
-}
-
-function pn() {
-    //assign
-    var an = document.getElementById("an");
-    var ngp = document.getElementById("NGP");
-    //result
-    var resn = Number(an.value) * 200 / 100;
-
-    ngp.value = resn;
     gesamtp();
     weight();
 }
