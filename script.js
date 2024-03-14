@@ -25,10 +25,21 @@ function preisPutzmittelkatalog() {
     var anzahlPutzmittelkatalog = document.getElementById("anzahlPutzmittelkatalog");
     var putzmittelkatalogGesamtPreis = document.getElementById("putzmittelkatalogGesamtPreis");
 
-    //reesult
+    //result
     var resultPutzmittelkatalog = Number(anzahlPutzmittelkatalog.value) * 100 / 100;
 
     putzmittelkatalogGesamtPreis.value = resultPutzmittelkatalog;
+}
+
+function preisÖle() {
+    //assign
+    var anzahlÖle = document.getElementById("anzahlÖle");
+    var öleGesamtPreis = document.getElementById("öleGesamtPreis");
+
+    //result
+    var resultÖle = Number(anzahlÖle.value) * 20 / 100;
+
+    öleGesamtPreis.value = resultÖle;
 }
 
 function pö() {
