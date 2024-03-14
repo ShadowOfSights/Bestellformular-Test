@@ -119,6 +119,17 @@ function preisA7() {
     a7GesamtPreis.value = resultA7;
 }
 
+function preisA7ohne() {
+    //assign
+    var anzahlA7ohne = document.getElementById("anzahlA7ohne");
+    var a7ohneGesamtPreis = document.getElementById("a7ohneGesamtPreis");
+
+    //result
+    var resultA7ohne = Number(anzahlA7ohne.value) * 15 / 100;
+
+    a7ohneGesamtPreis.value = resultA7ohne;
+}
+
 
 
 
