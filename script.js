@@ -130,6 +130,17 @@ function preisA7ohne() {
     a7ohneGesamtPreis.value = resultA7ohne;
 }
 
+function preisDuftpartyKarten() {
+    //assign
+    var anzahlDuftpartyKarten = document.getElementById("anzahlDuftpartyKarten");
+    var duftpartyKartenGesamtPreis = document.getElementById("duftpartyKartenGesamtPreis");
+
+    //result
+    var resultDuftpartyKarten = Number(anzahlDuftpartyKarten.value) * 5 / 100;
+
+    duftpartyKartenGesamtPreis.value = resultDuftpartyKarten;
+}
+
 
 
 
