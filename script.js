@@ -152,6 +152,17 @@ function preisTesterkarten() {
     testerkartenGesamtPreis.value = resultTesterkarten;
 }
 
+function preisAufkleber() {
+    //assign
+    var anzahlAufkleber = document.getElementById("anzahlAufkleber");
+    var aufkleberGesamtPreis = document.getElementById("aufkleberGesamtPreis");
+
+    //result
+    var resultAufkleber = Number(anzahlAufkleber.value) * 5 / 100;
+
+    aufkleberGesamtPreis.value = resultAufkleber;
+}
+
 
 
 
