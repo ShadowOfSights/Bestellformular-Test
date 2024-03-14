@@ -42,6 +42,30 @@ function preisÖle() {
     öleGesamtPreis.value = resultÖle;
 }
 
+function preisA5() {
+    //assign
+    var anzalA5 = document.getElementById("anzalA5");
+    var a5GesamtPreis = document.getElementById("a5GesamtPreis");
+
+    //result
+    var resultA5 = Number(anzalA5.value) * 15 / 100;
+
+    a5GesamtPreis.value = resultA5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function pö() {
     //assign
     var aö = document.getElementById("aö");
