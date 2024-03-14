@@ -53,6 +53,37 @@ function preisA5() {
     a5GesamtPreis.value = resultA5;
 }
 
+function preisA5ohne() {
+    //assign
+    var anzalA5ohne = document.getElementById("anzalA5ohne");
+    var a5ohneGesamtPreis = document.getElementById("a5ohneGesamtPreis");
+
+    //result
+    var resultA5ohne = Number(anzalA5ohne.value) * 15 / 100;
+
+    a5ohneGesamtPreis.value = resultA5ohne;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
