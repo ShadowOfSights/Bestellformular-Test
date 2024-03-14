@@ -86,6 +86,17 @@ function preisDankeschönkarten() {
     dankeschönkarteGesamtPreis.value = resultDankeschönkarte;
 }
 
+function preisMuttertagskarten() {
+    //assign
+    var anzahlMuttertagskarten = document.getElementById("anzahlMuttertagskarten");
+    var muttertagskartenGesamtPreis = document.getElementById("muttertagskartenGesamtPreis");
+
+    //result
+    var resultMuttertagskarte = Number(anzahlMuttertagskarten.value) * 10 / 100;
+
+    muttertagskartenGesamtPreis.value = resultMuttertagskarte;
+}
+
 
 
 
