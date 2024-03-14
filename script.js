@@ -97,6 +97,17 @@ function preisMuttertagskarten() {
     muttertagskartenGesamtPreis.value = resultMuttertagskarte;
 }
 
+function preisReaumduftflyer() {
+    //assign
+    var anzahlRaumduftflyer = document.getElementById("anzahlRaumduftflyer");
+    var raumduftflyerGesamtPreis = document.getElementById("raumduftflyerGesamtPreis");
+
+    //result
+    var resultRaumduftFlyer = Number(anzahlRaumduftflyer.value) * 10 / 100;
+
+    raumduftflyerGesamtPreis.value = resultRaumduftFlyer;
+}
+
 
 
 
