@@ -64,6 +64,17 @@ function preisA5ohne() {
     a5ohneGesamtPreis.value = resultA5ohne;
 }
 
+function preisHautpflegeplan() {
+    //assign
+    var anzahlHautpflegeplan = document.getElementById("anzahlHautpflegeplan");
+    var hautpflegeplanGesamtPreis = document.getElementById("hautpflegeplanGesamtPreis");
+
+    //result
+    var resultHautpflegeplan = Number(anzahlHautpflegeplan.value) * 15 / 100;
+
+    hautpflegeplanGesamtPreis.value = resultHautpflegeplan;
+}
+
 
 
 
