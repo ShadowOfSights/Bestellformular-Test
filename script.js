@@ -141,6 +141,17 @@ function preisDuftpartyKarten() {
     duftpartyKartenGesamtPreis.value = resultDuftpartyKarten;
 }
 
+function preisTesterkarten() {
+    //assign
+    var anzahlTesterkarten = document.getElementById("anzahlTesterkarten");
+    var testerkartenGesamtPreis = document.getElementById("testerkartenGesamtPreis");
+
+    //result
+    var resultTesterkarten = Number(anzahlTesterkarten.value) * 5 / 100;
+
+    testerkartenGesamtPreis.value = resultTesterkarten;
+}
+
 
 
 
