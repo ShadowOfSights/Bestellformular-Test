@@ -151,18 +151,6 @@ function pa() {
     weight();
 }
 
-function pp() {
-    //assign
-    var ap = document.getElementById("ap");
-    var pgp = document.getElementById("PGP");
-    //result
-    var resp = Number(ap.value) * 100 / 100;
-
-    pgp.value = resp;
-    gesamtp();
-    weight();
-}
-
 function pr() {
     //assign
     var ar = document.getElementById("ar");
