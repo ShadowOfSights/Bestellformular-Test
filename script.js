@@ -8,6 +8,7 @@ function preisBestellblock() {
 
     bestellblockGesamtPreis.value = resultBestellblock;
     gesamtPreis();
+    weight();
 }
 
 function preisNotizblock() {
@@ -20,6 +21,7 @@ function preisNotizblock() {
 
     notizblockGesamtPreis.value = resultNotizblock;
     gesamtPreis();
+    weight();
 } 
 
 function preisPutzmittelkatalog() {
@@ -32,6 +34,7 @@ function preisPutzmittelkatalog() {
 
     putzmittelkatalogGesamtPreis.value = resultPutzmittelkatalog;
     gesamtPreis();
+    weight();
 }
 
 function preisÖle() {
@@ -44,6 +47,7 @@ function preisÖle() {
 
     öleGesamtPreis.value = resultÖle;
     gesamtPreis();
+    weight();
 }
 
 function preisA5() {
@@ -56,6 +60,7 @@ function preisA5() {
 
     a5GesamtPreis.value = resultA5;
     gesamtPreis();
+    weight();
 }
 
 function preisA5ohne() {
@@ -68,6 +73,7 @@ function preisA5ohne() {
 
     a5ohneGesamtPreis.value = resultA5ohne;
     gesamtPreis();
+    weight();
 }
 
 function preisHautpflegeplan() {
@@ -80,6 +86,7 @@ function preisHautpflegeplan() {
 
     hautpflegeplanGesamtPreis.value = resultHautpflegeplan;
     gesamtPreis();
+    weight();
 }
 
 function preisDankeschönkarten() {
@@ -92,6 +99,7 @@ function preisDankeschönkarten() {
 
     dankeschönkarteGesamtPreis.value = resultDankeschönkarte;
     gesamtPreis();
+    weight();
 }
 
 function preisGutscheine() {
@@ -104,6 +112,7 @@ function preisGutscheine() {
 
     gutscheineGesamtPreis.value = resultGutscheine;
     gesamtPreis();
+    weight();
 }
 
 function preisMuttertagskarten() {
@@ -116,6 +125,7 @@ function preisMuttertagskarten() {
 
     muttertagskartenGesamtPreis.value = resultMuttertagskarte;
     gesamtPreis();
+    weight();
 }
 
 function preisReaumduftflyer() {
@@ -128,6 +138,7 @@ function preisReaumduftflyer() {
 
     raumduftflyerGesamtPreis.value = resultRaumduftFlyer;
     gesamtPreis();
+    weight();
 }
 
 function preisA7() {
@@ -140,6 +151,7 @@ function preisA7() {
 
     a7GesamtPreis.value = resultA7;
     gesamtPreis();
+    weight();
 }
 
 function preisA7ohne() {
@@ -152,6 +164,7 @@ function preisA7ohne() {
 
     a7ohneGesamtPreis.value = resultA7ohne;
     gesamtPreis();
+    weight();
 }
 
 function preisDuftpartyKarten() {
@@ -164,6 +177,7 @@ function preisDuftpartyKarten() {
 
     duftpartyKartenGesamtPreis.value = resultDuftpartyKarten;
     gesamtPreis();
+    weight();
 }
 
 function preisTesterkarten() {
@@ -176,6 +190,7 @@ function preisTesterkarten() {
 
     testerkartenGesamtPreis.value = resultTesterkarten;
     gesamtPreis();
+    weight();
 }
 
 function preisAufkleber() {
@@ -188,6 +203,7 @@ function preisAufkleber() {
 
     aufkleberGesamtPreis.value = resultAufkleber;
     gesamtPreis();
+    weight();
 }
 
 function gesamtPreis() {
@@ -199,147 +215,95 @@ function gesamtPreis() {
     var p6 = document.getElementById("a5ohneGesamtPreis");
     var p7 = document.getElementById("hautpflegeplanGesamtPreis");
     var p8 = document.getElementById("dankeschönkarteGesamtPreis");
-    var p9 = document.getElementById("muttertagskartenGesamtPreis");
-    var p10 = document.getElementById("raumduftflyerGesamtPreis");
-    var p11 = document.getElementById("a7GesamtPreis");
-    var p12 = document.getElementById("a7ohneGesamtPreis");
-    var p13 = document.getElementById("duftpartyKartenGesamtPreis");
-    var p14 = document.getElementById("testerkartenGesamtPreis");
-    var p15 = document.getElementById("aufkleberGesamtPreis");
+    var p9 = document.getElementById("gutscheineGesamtPreis");
+    var p10 = document.getElementById("muttertagskartenGesamtPreis");
+    var p11 = document.getElementById("raumduftflyerGesamtPreis");
+    var p12 = document.getElementById("a7GesamtPreis");
+    var p13 = document.getElementById("a7ohneGesamtPreis");
+    var p14 = document.getElementById("duftpartyKartenGesamtPreis");
+    var p15 = document.getElementById("testerkartenGesamtPreis");
+    var p16 = document.getElementById("aufkleberGesamtPreis")
 
     var gppa = document.getElementById("gppa");
 
-    gesamtpreis = Number(p1.value)+Number(p2.value)+Number(p3.value)+Number(p4.value)+Number(p5.value)+Number(p6.value)+Number(p7.value)+Number(p8.value)+Number(p9.value)+Number(p10.value)+Number(p11.value)+Number(p12.value)+Number(p13.value)+Number(p14.value)+Number(p15.value);
+    gesamtpreis = Number(p1.value)+Number(p2.value)+Number(p3.value)+Number(p4.value)+Number(p5.value)+Number(p6.value)+Number(p7.value)+Number(p8.value)+Number(p9.value)+Number(p10.value)+Number(p11.value)+Number(p12.value)+Number(p13.value)+Number(p14.value)+Number(p15.value)+Number(p16.value);
 
     gppa.value = gesamtpreis;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function gesamtp() {
-    var ögp = document.getElementById("ÖGP");
-    var bgp = document.getElementById("BGP");
-    var a6gp = document.getElementById("A6GP");
-    var vgp = document.getElementById("VGP");
-    var ggp = document.getElementById("GGP");
-    var hgp = document.getElementById("HGP");
-    var kgp = document.getElementById("KGP");
-    var ngp = document.getElementById("NGP");
-    var a5gp = document.getElementById("A5GP");
-    var a7gp = document.getElementById("A7GP");
-    var agp = document.getElementById("AGP");
-    var pgp = document.getElementById("PGP");
-    var rgp = document.getElementById("RGP");
-    var tgp = document.getElementById("TGP");
-
-    var gppa = document.getElementById("gppa");
-
-    resultprice = Number(ögp.value)+Number(bgp.value)+Number(a6gp.value)+Number(vgp.value)+Number(ggp.value)+Number(hgp.value)+Number(kgp.value)+Number(ngp.value)+Number(a5gp.value)+Number(a7gp.value)+Number(agp.value)+Number(pgp.value)+Number(rgp.value)+Number(tgp.value);
-
-    gppa.value = resultprice;
-}
-
 function weight() {
-    var aö = document.getElementById("aö");
-    var ab = document.getElementById("ab");
-    var aa6 = document.getElementById("aa6");
-    var av = document.getElementById("av");
-    var ag = document.getElementById("ag");
-    var ah = document.getElementById("ah");
-    var ak = document.getElementById("ak");
-    var an = document.getElementById("an");
-    var aa5 = document.getElementById("aa5");
-    var aa7 = document.getElementById("aa7");
-    var aa = document.getElementById("aa");
-    var ap = document.getElementById("ap");
-    var ar = document.getElementById("ar");
-    var at = document.getElementById("at");
+    var a1 = document.getElementById("anzahlBestellblock");
+    var a2 = document.getElementById("anzahlNotizblock");
+    var a3 = document.getElementById("anzahlPutzmittelkatalog");
+    var a4 = document.getElementById("anzahlÖle");
+    var a5 = document.getElementById("anzalA5");
+    var a6 = document.getElementById("anzalA5ohne");
+    var a7 = document.getElementById("anzahlHautpflegeplan");
+    var a8 = document.getElementById("anzahlDankeschönkarten");
+    var a9 = document.getElementById("anzahlGutscheine");
+    var a10 = document.getElementById("anzahlMuttertagskarten");
+    var a11 = document.getElementById("anzahlRaumduftflyer");
+    var a12 = document.getElementById("anzahlA7");
+    var a13 = document.getElementById("anzahlA7ohne");
+    var a14 = document.getElementById("anzahlDuftpartyKarten");
+    var a15 = document.getElementById("anzahlTesterkarten");
+    var a16 = document.getElementById("anzahlAufkleber");
 
-    var gö = Number(aö.value) * 33 / 1000;
-    var gb = Number(ab.value) * 234 / 1000;
-    var ga6 = Number(aa6.value) * 45 / 10000;
-    var gv = Number(av.value) * 14 / 10000;
-    var gg = Number(ag.value) * 45 / 10000;
-    var gh = Number(ah.value) * 85 / 10000;
-    var gk = Number(ak.value) * 600 / 1000;
-    var gn = Number(an.value) * 140 / 1000;
-    var ga5 = Number(aa5.value) * 85 / 10000;
-    var ga7 = Number(aa7.value) * 39 / 10000;
-    var ga = Number(aa.value) * 1 / 10000;
-    var gp = Number(ap.value) * 759 / 10000;
-    var gr = Number(ar.value) * 64 / 10000;
-    var gt = Number(at.value) * 14 / 10000;
+    var v1 = Number(a1.value) * 234 / 1000;
+    var v2 = Number(a2.value) * 140 / 1000;
+    var v3 = Number(a3.value) * 791 / 10000;
+    var v4 = Number(a4.value) * 33 / 1000;
+    var v5 = Number(a5.value) * 85 / 10000;
+    var v6 = Number(a6.value) * 85 / 10000;
+    var v7 = Number(a7.value) * 85 / 10000;
+    var v8 = Number(a8.value) * 45 / 10000;
+    var v9 = Number(a9.value) * 45 / 10000;
+    var v10 = Number(a10.value) * 45 / 10000;
+    var v11 = Number(a11.value) * 64 / 10000;
+    var v12 = Number(a12.value) * 39 / 10000;
+    var v13 = Number(a13.value) * 39 / 10000;
+    var v14 = Number(a14.value) * 14 / 10000;
+    var v15 = Number(a15.value) * 14 / 10000;
+    var v16 = Number(a16.value) * 1 / 10000;
 
     var gppg = document.getElementById("gppg");
 
+    var gesamtgewicht = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10 + v11 + v12 + v13 + v14 + v15 + v16;
+
     var vk = document.getElementById("vk");
-
-    var gesgew = gö + gb + ga6 + gv + gg + gh + gk + gn + ga5 + ga7 + ga + gp + gr + gt;
-
-    if(gesgew == 0) {
+    
+    if(gesamtgewicht == 0) {
         vk.value = Number(0.00);
     }
 
-    if(gesgew > 0 && gesgew <= 0.5 ) {
+    if(gesamtgewicht > 0 && gesamtgewicht <= 0.5 ) {
         vk.value = Number(1.60);
     }
 
-    if(gesgew > 0.5 && gesgew <= 1) {
+    if(gesamtgewicht > 0.5 && gesamtgewicht <= 1) {
         vk.value = Number(2.75);
     }
 
-    if(gesgew > 1 && gesgew <= 2) {
+    if(gesamtgewicht > 1 && gesamtgewicht <= 2) {
         vk.value = Number(3.99);
     }
 
-    if(gesgew > 2 && gesgew <= 5) {
+    if(gesamtgewicht > 2 && gesamtgewicht <= 5) {
         vk.value = Number(6.99);
     }
 
-    if(gesgew > 5 && gesgew <= 10) {
+    if(gesamtgewicht > 5 && gesamtgewicht <= 10) {
         vk.value = Number(9.49);
     }
 
-    if(gesgew > 10) {
+    if(gesamtgewicht > 10) {
         vk.value = Number(16.49);
     }
 
-    gppg.value = gesgew;
+
+    gppg.value = gesamtgewicht;
     gespreis();
-   }
+}
 
 function gespreis() {
     var gppa = document.getElementById("gppa");
