@@ -94,6 +94,18 @@ function preisDankeschönkarten() {
     gesamtPreis();
 }
 
+function preisGutscheine() {
+    //assign
+    var anzahlGutscheine = document.getElementById("anzahlGutscheine");
+    var gutscheineGesamtPreis = document.getElementById("gutscheineGesamtPreis");
+
+    //result
+    var resultGutscheine = Number(anzahlGutscheine.value) * 10 / 100;
+
+    gutscheineGesamtPreis.value = resultGutscheine;
+    gesamtPreis();
+}
+
 function preisMuttertagskarten() {
     //assign
     var anzahlMuttertagskarten = document.getElementById("anzahlMuttertagskarten");
