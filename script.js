@@ -1,3 +1,16 @@
+function preisBestellblock() {
+    //assign
+    var anzahlBestellblock = document.getElementById("anzahlBestellblock");
+    var bestellblockGesamtPreis = document.getElementById("BestellblockGesamtPreis");
+
+    //result
+    var resultBestellblock = Number(anzahlBestellblock.value) * 650 / 100;
+
+    bestellblockGesamtPreis.value = resultBestellblock;
+    gesamtp();
+    weight();
+}
+
 function pö() {
     //assign
     var aö = document.getElementById("aö");
