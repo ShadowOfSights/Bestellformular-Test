@@ -268,40 +268,79 @@ function weight() {
 
     var gppg = document.getElementById("gppg");
 
-    var gesamtgewicht = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10 + v11 + v12 + v13 + v14 + v15 + v16;
+    var gewicht = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10 + v11 + v12 + v13 + v14 + v15 + v16;
+    var temp = gewicht;
+    var zusatz;
+    var test = 1;
+
+    if(temp == 0 && test == 1) {
+        zusatz = 0;
+        temp = 0;
+        test = 0;
+    }
+
+    if(temp > 0 && temp <= 0.5 && test == 1) {
+        zusatz = 0.055;
+        temp = 0;
+        test = 0;
+    }
+
+    if(temp > 0.5 && temp <= 1 && test == 1) {
+        zusatz = 0.060;
+        temp = 0;
+        test = 0;
+    }
+
+    if(temp > 1 && temp <= 2 && test == 1) {
+        zusatz = 0.120;
+        temp = 0;
+        test = 0;
+    }
+    
+    if(temp > 2 && temp <= 5 && test == 1) {
+        zusatz = 0.120;
+        temp = 0;
+        test = 0;
+    }
+
+    if(temp > 5 && test == 1) {
+        zusatz = 0.250;
+        temp = 0;
+        test = 0;
+    }
 
     var vk = document.getElementById("vk");
     
-    if(gesamtgewicht == 0) {
+    if(gewicht == 0) {
         vk.value = Number(0.00);
     }
 
-    if(gesamtgewicht > 0 && gesamtgewicht <= 0.5 ) {
+    if(gewicht > 0 && gewicht <= 0.5 ) {
         vk.value = Number(1.60);
     }
 
-    if(gesamtgewicht > 0.5 && gesamtgewicht <= 1) {
+    if(gewicht > 0.5 && gewicht <= 1) {
         vk.value = Number(2.75);
     }
 
-    if(gesamtgewicht > 1 && gesamtgewicht <= 2) {
+    if(gewicht > 1 && gewicht <= 2) {
         vk.value = Number(3.99);
     }
 
-    if(gesamtgewicht > 2 && gesamtgewicht <= 5) {
+    if(gewicht > 2 && gewicht <= 5) {
         vk.value = Number(6.99);
     }
 
-    if(gesamtgewicht > 5 && gesamtgewicht <= 10) {
+    if(gewicht > 5 && gewicht <= 10) {
         vk.value = Number(9.49);
     }
 
-    if(gesamtgewicht > 10) {
+    if(gewicht > 10) {
         vk.value = Number(16.49);
     }
 
 
-    gppg.value = gesamtgewicht;
+    gppg.value = gewicht;
     gespreis();
 }
 
