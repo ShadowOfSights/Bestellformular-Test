@@ -270,46 +270,46 @@ function weight() {
 
     var gewicht = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10 + v11 + v12 + v13 + v14 + v15 + v16;
     var temp = gewicht;
-    var zusatz;
+    var zgb = document.getElementById("zgb");
     var test = 1;
 
     if(temp == 0 && test == 1) {
-        zusatz = 0;
+        zgb.value = Number(0.00);
         temp = 0;
         test = 0;
     }
 
     if(temp > 0 && temp <= 0.5 && test == 1) {
-        zusatz = 0.055;
+        zgb.value = Number(0.055);
         temp = 0;
         test = 0;
     }
 
     if(temp > 0.5 && temp <= 1 && test == 1) {
-        zusatz = 0.060;
+        zgb.value = Number(0.060);
         temp = 0;
         test = 0;
     }
 
     if(temp > 1 && temp <= 2 && test == 1) {
-        zusatz = 0.120;
+        zgb.value = Number(0.120);
         temp = 0;
         test = 0;
     }
     
     if(temp > 2 && temp <= 5 && test == 1) {
-        zusatz = 0.120;
+        zgb.value = Number(0.120);
         temp = 0;
         test = 0;
     }
 
     if(temp > 5 && test == 1) {
-        zusatz = 0.250;
+        zgb.value = Number(0.250);
         temp = 0;
         test = 0;
     }
 
-    var gesamtgewicht = zusatz + gewicht;
+    var gesamtgewicht = Number(zgb.value) + gewicht;
 
     var vk = document.getElementById("vk");
     
