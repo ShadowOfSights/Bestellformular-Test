@@ -309,38 +309,40 @@ function weight() {
         test = 0;
     }
 
+    var gesamtgewicht = zusatz + gewicht;
+
     var vk = document.getElementById("vk");
     
-    if(gewicht == 0) {
+    if(gesamtgewicht == 0) {
         vk.value = Number(0.00);
     }
 
-    if(gewicht > 0 && gewicht <= 0.5 ) {
+    if(gesamtgewicht > 0 && gesamtgewicht <= 0.5 ) {
         vk.value = Number(1.60);
     }
 
-    if(gewicht > 0.5 && gewicht <= 1) {
+    if(gesamtgewicht > 0.5 && gesamtgewicht <= 1) {
         vk.value = Number(2.75);
     }
 
-    if(gewicht > 1 && gewicht <= 2) {
+    if(gesamtgewicht > 1 && gesamtgewicht <= 2) {
         vk.value = Number(3.99);
     }
 
-    if(gewicht > 2 && gewicht <= 5) {
+    if(gesamtgewicht > 2 && gesamtgewicht <= 5) {
         vk.value = Number(6.99);
     }
 
-    if(gewicht > 5 && gewicht <= 10) {
+    if(gesamtgewicht > 5 && gesamtgewicht <= 10) {
         vk.value = Number(9.49);
     }
 
-    if(gewicht > 10) {
+    if(gesamtgewicht > 10) {
         vk.value = Number(16.49);
     }
 
 
-    gppg.value = gewicht;
+    gppg.value = gesamtgewicht;
     gespreis();
 }
 
