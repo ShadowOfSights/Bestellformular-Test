@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="Blickfang_Logo.ico">
+
+        <title>Bestellformular Test</title>
+
+    </head>
+
+    <body>
+
+        <h1>
+            Bestellformular Test
+        </h1>
+
+        <form action="https://formspree.io/f/mbjnaqny" method="POST">
+
+            <p>
+                <strong id="free">Bitte geben Sie hier ihre persönlichen Informationen an</strong>
+            </p>
+
+            <table class="blank">
+                <tr>
+                    <th class="blank" width="450px"></th>
+                    <th class="blank"width="700px"></th>
+                    <th class="blank" width="600px"></th>
+                </tr>
+
+                <tr>
+                    <td>Vorname:<strong id="s">*</strong></td>
+                    <td id="w"><input required id="n" type="text" name="Vorname" placeholder="Max"></td>
+                    <td class="blank"></td>
+                </tr>
+
+                <tr>
+                    <td>Nachname:<strong id="s">*</strong></td>
+                    <td id="w"><input required id="n" type="text" name="Nachname" placeholder="Mustermann"></td>
+                    <td class="blank"></td>
+                </tr>
+
+                <tr>
+                    <td>Straße & Hausnummer:<strong id="s">*</strong></td>
+                    <td id="w"><input required id="n" type="text" placeholder="Musterstraße 1" name="Staße & Hausnummer"></td>
+                    <td class="blank"></td>
+                </tr>
+
+                <tr>
+                    <td>PLZ & Ort:<strong id="s">*</strong></td>
+                    <td id="w"><input required id="n" type="text" placeholder="12345 Musterhausen" name="PLZ & Ort"></td>
+                    <td class="blank"></td>
+                </tr>
+
+            </table>
+
+            <p>
+                <strong>Bitte geben Sie in der Liste die Anzahl bei den Produkten an, die Sie bestellen wollen</strong>
+                <br>
+                Bitte lassen sie als Menge "0" eingetragen, wenn Sie den Artikel nicht bestellen wollen
+            </p>
+
+            <table>
+
+                <tr>
+                    <th id="th">Produkt</th>
+                    <th id="th" class="anz">Anzahl</th>
+                    <th id="th">Preis(€/stk.)</th>
+                    <th id="th">Gewicht(kg)*</th>
+                    <th id="th">Gesamtpreis des Produktes</th>
+                </tr>
+
+                <tr>
+                    <td id="w">Bestellblock</td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Bestellblock" id="anzahlBestellblock" type="text" value="0" autocomplete="off" onkeyup="preisBestellblock()"></td>
+                    <td id="w">6.50</td>
+                    <td id="w">0.234</td>
+                    <td id="w"><input style="background-color: white;" id="bestellblockGesamtPreis" readonly class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td>Notizblock</td>
+                    <td class="anz"><input name="Notizblock" id="anzahlNotizblock" type="text" value="0" autocomplete="off" onkeyup="preisNotizblock()"></td>
+                    <td>2.00</td>
+                    <td>0.140</td>
+                    <td><input readonly id="notizblockGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td id="w">Putzmittel Katalog</td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Putzmittel Katalog" id="anzahlPutzmittelkatalog" type="text" value="0" autocomplete="off" onkeyup="preisPutzmittelkatalog()"></td>
+                    <td id="w">1.00</td>
+                    <td id="w">0.0791</td>
+                    <td id="w"><input style="background-color: white;" readonly id="putzmittelkatalogGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td>Ätherische Öle Katalog</td>
+                    <td class="anz"><input value="0" id="anzahlÖle" type="text" autocomplete="off" onkeyup="preisÖle()" name="Ätherische Öle Katalog"></td>
+                    <td>0.20</td>
+                    <td>0.033</td>
+                    <td><input readonly id="öleGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td id="w">Preisliste A5</td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Preisliste A5" id="anzalA5" type="text" value="0" autocomplete="off" onkeyup="preisA5()"></td>
+                    <td id="w">0.15</td>
+                    <td id="w">0.0085</td>
+                    <td id="w"><input style="background-color: white;" readonly id="a5GesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td>Preisliste A5 <strong><i>ohne Namen</i>	</strong></td>
+                    <td class="anz"><input name="Preisliste A5 ohne Namen" id="anzalA5ohne" type="text" value="0" autocomplete="off" onkeyup="preisA5ohne()"></td>
+                    <td>0.15</td>
+                    <td>0.0085</td>
+                    <td><input readonly id="a5ohneGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+                
+                <tr>
+                    <td id="w">Hautpflegeplan</td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Hautpflegeplan" id="anzahlHautpflegeplan" type="text" value="0" autocomplete="off" onkeyup="preisHautpflegeplan()"></td>
+                    <td id="w">0.15</td>
+                    <td id="w">0.0085</td>
+                    <td id="w"><input style="background-color: white;" readonly  id="hautpflegeplanGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td>Dankeschön Karten</td>
+                    <td class="anz"><input name="Dankeschön Karten" id="anzahlDankeschönkarten" type="text" value="0" autocomplete="off" onkeyup="preisDankeschönkarten()"></td>
+                    <td>0.10</td>
+                    <td>0.0045</td>
+                    <td><input readonly id="dankeschönkarteGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+                
+                <tr>
+                    <td id="w">Gutschein</td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Gutschein" id="anzahlGutscheine" type="text" value="0" autocomplete="off" onkeyup="preisGutscheine()"></td>
+                    <td id="w">0.10</td>
+                    <td id="w">0.0045</td>
+                    <td id="w"><input style="background-color: white;" readonly id="gutscheineGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td>Muttertagskarten</td>
+                    <td class="anz"><input name="Muttertagskarten" id="anzahlMuttertagskarten" type="text" value="0" autocomplete="off" onkeyup="preisMuttertagskarten()"></td>
+                    <td>0.10</td>
+                    <td>0.0045</td>
+                    <td><input readonly id="muttertagskartenGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+                
+                <tr>
+                    <td id="w">Raumduft Flyer</td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Raumduft Flyer" id="anzahlRaumduftflyer" type="text" value="0" autocomplete="off" onkeyup="preisReaumduftflyer()"></td>
+                    <td id="w">0.10</td>
+                    <td id="w">0.0064</td>
+                    <td id="w"><input style="background-color: white;" readonly id="raumduftflyerGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+                
+                <tr>
+                    <td>Preisliste A7</td>
+                    <td class="anz"><input name="Preisliste A7" id="anzahlA7" type="text" value="0" autocomplete="off" onkeyup="preisA7()"></td>
+                    <td>0.15</td>
+                    <td>0.0039</td>
+                    <td><input readonly id="a7GesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td id="w">Preisliste A7 <strong><i>ohne Namen</i></strong></td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Preisliste A7 ohne Namen" id="anzahlA7ohne" type="text" value="0" autocomplete="off" onkeyup="preisA7ohne()"></td>
+                    <td id="w">0.15</td>
+                    <td id="w">0.0039</td>
+                    <td id="w"><input style="background-color: white;" readonly id="a7ohneGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+
+                <tr>
+                    <td>Duftparty Karten</td>
+                    <td class="anz"><input name="Duftparty Karten" id="anzahlDuftpartyKarten" type="text" value="0" autocomplete="off" onkeyup="preisDuftpartyKarten()"></td>
+                    <td>0.05</td>
+                    <td>0.0014</td>
+                    <td><input readonly id="duftpartyKartenGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+                
+                <tr>
+                    <td id="w">Testerkarten</td>
+                    <td id="w" class="anz"><input style="background-color: white;" name="Testerkarten" id="anzahlTesterkarten" type="text" value="0" autocomplete="off" onkeyup="preisTesterkarten()"></td>
+                    <td id="w">0.05</td>
+                    <td id="w">0.0014</td>
+                    <td id="w"><input style="background-color: white;" readonly id="testerkartenGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+                
+                <tr>
+                    <td>Proben Aufkleber</td>
+                    <td class="anz"><input name="Proben Aufkleber" id="anzahlAufkleber" type="text" value="0" autocomplete="off" onkeyup="preisAufkleber()"></td>
+                    <td>0.05</td>
+                    <td>0.0001</td>
+                    <td><input readonly id="aufkleberGesamtPreis" class="gpa" type="text" placeholder="0.00">€</td>
+                </tr>
+        </table>
+        
+        <br>
+
+        <table id="t2">
+
+            <tr>
+                <th>Übersicht Ihrer Bestellung:</th>
+                <th style="background-color: rgb(170, 218, 255); border-style: none;"></th>
+            </tr>
+
+            <tr>
+                <td id="t2c1">Gesamtpreis ohne Versand</td>
+                <td id="t2c2"><input required name="Gesamtpreis ohne Versand" readonly id="gppa" type="text" placeholder="0.00">€</td>
+                <td id="t2c3"></td>
+            </tr>
+
+            <tr>
+                <td id="t2c1">Zusatzgewicht der Bestellung</td>
+                <td id="t2c2"><input required name="Zusatzgewicht der Bestellung" readonly id="zgb" type="text" placeholder="0.00">kg</td>
+            </tr>
+
+            <tr>
+                <td id="t2c1">Gesamtgewicht der Bestellung</td>
+                <td id="t2c2"><input required name="Gesamtgewicht der Bestellung" readonly id="gppg" type="text" placeholder="0.00">kg</td>
+            </tr>
+
+            <tr>
+                <td id="t2c1">Versandkosten</td>
+                <td id="t2c2"><input required name="Versandkosten" readonly id="vk" type="text" placeholder="0.00">€</td>
+            </tr>
+
+            <tr>
+                <td id="t2c1">Gesamtpreis mit Versand</td>
+                <td id="t2c2"><input required name="Gesamtpreis mit Versand" readonly id="gpv" type="text" placeholder="0.00">€</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <p>
+            <input id="checkbox" name="DSGVO akzeptiert" type="checkbox" required><strong id="s">*</strong> Mit dem Abgeben meiner Bestellung bin ich damit einverstanden, dass meine wahrheitsgemäß angegebenen Daten zur Verarbeitung gemäß <a href="https://dsgvo-gesetz.de/art-6-dsgvo/">Art. 6 DSGVO</a> meiner Bestellung verarbeitet werden.
+            <br>
+            <br>
+            <br>
+            Bevor Sie Ihre Bestellung abgeben, stellen sie sicher, dass sie den <strong>Betrag inklusive der Versandkosten</strong> an folgende Kontoverbindung senden:
+            <br>
+            <br>
+            Sanja Gagel
+            <br>
+            IBAN: DE56 5002 4024 6228 0062 01
+            <br>
+            BIC: DEFFDEFFXXX
+            <br>
+            Verwendungszweck: Ihr Vor- und Nachname
+            <br>
+            <br>
+            <input id="checkbox" name="Zahlungspflicht akzeptiert" type="checkbox" require><strong id="s">*</strong> Ich akzeptiere, dass ich meine Ware erst nach Bezahlen der Bestellung erhalten werde und den Betrag überwiesen habe.
+        </p>
+
+        <br>
+
+        <button type="submit">Bestellung absenden</button>
+
+        <br>
+
+        </form>
+
+    </body>
+
+<hr>
+
+    <footer>
+        Mit <strong id="s">*</strong> markierte Angaben müssen angegeben werden.
+        <br>
+        Alle Daten werden nur zur Verarbeitung der Bestellung verwendet und danach vernichtet. Siehe auch <a href="https://dsgvo-gesetz.de/art-5-dsgvo/">Art. 5 DSGVO</a>
+        <br>
+        Alle Rechte vorbehalten. Änderungen können auftreten.
+        <br>
+        <br>
+        &copy; ShadowDevelopment 21.03.2024
+    </footer>
+</html>
